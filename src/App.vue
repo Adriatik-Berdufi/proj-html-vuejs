@@ -8,6 +8,7 @@ import AppHero from './components/AppHero.vue';
 import AppBlogs from './components/AppBlogs.vue';
 import AppCard from './components/AppCard.vue';
 import AppTransorm from './components/AppTransform.vue';
+import AppTestimonials from './components/AppTestimonials.vue';
 export default {
   data() {
     
@@ -16,13 +17,14 @@ export default {
      
     }
   },
-  components:{AppTest,AppHeader,AppFooter,AppHero,AppBlogs,AppSubscribe,AppCard,AppTransorm},
+  components:{AppTest,AppHeader,AppFooter,AppHero,AppBlogs,AppSubscribe,AppCard,AppTransorm,AppTestimonials},
 };
 </script>
 
 <template>
   <AppHeader/>
   <AppHero/>
+  <AppTestimonials/>
   <AppTransorm/> 
   <AppBlogs/>
   <AppSubscribe/>
