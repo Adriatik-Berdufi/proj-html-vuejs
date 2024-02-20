@@ -17,7 +17,7 @@ export default{
 
 <template>
     <section class="subscribe-section">
-
+        <div class="circle"></div>
         <div class="subscribe text-center">
             <div class="d-flex gap-3 justify-content-center">
                 <h3>Subscribe</h3>
@@ -31,6 +31,8 @@ export default{
                 <button class="btn-subscribe btn btn-outline-secondary" type="button">Subscribe</button>
             </div>
         </div>
+        <div class="align-self-start mt-5"><img src="../assets/images/maxcoach-shape-09.png" alt=""></div>
+        <div class="img-absolut"><img src="../assets/images/maxcoach-shape-02.png" alt=""></div>
         
     </section>
 </template>
@@ -45,7 +47,6 @@ export default{
     background-color: $white-color;
     @include center-flex;
     .subscribe{
-        border: 2px solid red;
         width: 660px;
         padding: 25px 50px;
         h3{
@@ -65,6 +66,18 @@ export default{
             font-weight: 800;
             padding: 15px 30px;
         }
+    }
+    .img-absolut{
+        position: absolute;
+        right: 20%;
+        height: 100px;
+    }
+    .circle{
+        @include circle;
+        height: 50px;
+        border-color: $gren-color;
+        position: absolute;
+        left: 15%;
     }
     
 
