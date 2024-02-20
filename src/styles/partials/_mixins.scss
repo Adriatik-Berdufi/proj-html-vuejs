@@ -14,7 +14,14 @@
 @mixin circle{ 
     aspect-ratio: 1;
     border-radius: 50%;
-    border: 10px solid black;
+    border: 7px solid black;
+}
+
+@mixin my-btn{
+    color: white;
+    border: none;
+    font-size: 14px;
+    font-weight: 800;
 }
 
   

@@ -36,7 +36,6 @@ export default{
 @use '../styles/partials/mixins.scss' as *;
 
 .our-blogs{
-    border: 2px solid red;
     background-color: $white-smoke-2-color;
     height: 800px;
     text-align: center;

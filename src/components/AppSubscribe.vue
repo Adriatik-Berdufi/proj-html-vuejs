@@ -59,17 +59,14 @@ export default{
             color: $gren-color;
         }
         .btn{
-            color: white;
+            @include  my-btn;
             background-color: $gren-color;
-            border: none;
-            font-size: 14px;
-            font-weight: 800;
             padding: 15px 30px;
         }
     }
     .img-absolut{
         position: absolute;
-        right: 20%;
+        right: 28%;
         height: 100px;
     }
     .circle{
