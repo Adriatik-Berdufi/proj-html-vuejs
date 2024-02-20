@@ -1,6 +1,7 @@
 <script>
 import{ store } from './store';
 import AppTest from './components/AppTest.vue';
+import AppHeader from './components/AppHeader.vue'
 
 export default {
   data() {
@@ -10,17 +11,17 @@ export default {
      
     }
   },
-  components:{AppTest},
+  components:{AppTest,AppHeader},
 };
 </script>
 
 <template>
+  <AppHeader/>
   <div class="container">
-    <h1>New project</h1>
-    <h3>{{ store.globalVarTest }}</h3>
-    <AppTest/>
+    
   </div>
 </template>
 
 <style scoped>
+ 
 </style>

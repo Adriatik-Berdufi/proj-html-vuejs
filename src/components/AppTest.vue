@@ -4,8 +4,8 @@ import { store } from "../store";
 export default{
   data(){
     return{
-     prova:'prova'
-
+      prova:'prova',
+     
     }
   },
 };
@@ -16,6 +16,9 @@ export default{
 
 <template>
    <h3>{{ prova }}</h3> 
+   <div>
+
+   </div>
   <h4>componente  AppTest collegato</h4>
 </template>
 
