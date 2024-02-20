@@ -4,6 +4,7 @@ import { store } from "../store";
 export default{
   data(){
     return{
+      store,
       prova:'prova',
      
     }
@@ -22,5 +23,8 @@ export default{
   <h4>componente  AppTest collegato</h4>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+//import of var and mixins
+@use '../styles/partials/variables.scss' as *;
+@use '../styles/partials/mixins.scss' as *;
 </style>
