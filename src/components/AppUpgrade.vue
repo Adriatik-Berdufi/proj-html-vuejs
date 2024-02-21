@@ -18,7 +18,6 @@ export default{
 <template>
    <section class="upgrade">
     <div class="img-container">
-      <h2></h2>
       <img class="img-center" src="../assets/images/stock-full-hd-11-670x450.jpg" alt="">
       <img class="svg0" src="../assets/svg/svg-0.svg" alt="">
       <img class="svg1" src="../assets/images/maxcoach-shape-05.png" alt="">
@@ -48,7 +47,6 @@ export default{
     height: 800px;
     @include center-flex;
     gap: 150px;
-    padding-bottom: 150px;
     background-color: $white-smoke-1-color;
 
      //img in absolute
@@ -103,13 +101,9 @@ export default{
         @include circle;
         border-color:rgb(236, 197, 171); 
         position: absolute;
-        top: -90px;
-        left:-33px;
+        top: -50px;
+        left:15px;
       }
-
-
-
-
       h2{
         font-size: 54px;
         color: black;
@@ -117,14 +111,11 @@ export default{
           color: $gren-color;
         }
       }
-
-
         .btn-view{
             @include my-btn-secondary;
             background-color: $white-smoke-1-color;
         }
         
-
     }
 }
 </style>
