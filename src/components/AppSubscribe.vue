@@ -17,8 +17,9 @@ export default{
 
 <template>
     <section class="subscribe-section">
-        <div class="circle"></div>
+        
         <div class="subscribe text-center">
+            <div class="circle"></div>
             <div class="d-flex gap-3 justify-content-center">
                 <h3>Subscribe</h3>
                 <h4>Newsletters</h4>
@@ -30,9 +31,10 @@ export default{
                 <input type="text" class="form-control" placeholder="Enter your email...">
                 <button class="btn-subscribe btn btn-outline-secondary" type="button">Subscribe</button>
             </div>
+
+            <div class="img-absolut-1 mt-5"><img src="../assets/images/maxcoach-shape-09.png" alt=""></div>
+            <div class="img-absolut"><img src="../assets/images/maxcoach-shape-02.png" alt=""></div>
         </div>
-        <div class="align-self-start mt-5"><img src="../assets/images/maxcoach-shape-09.png" alt=""></div>
-        <div class="img-absolut"><img src="../assets/images/maxcoach-shape-02.png" alt=""></div>
         
     </section>
 </template>
@@ -47,6 +49,7 @@ export default{
     background-color: $white-color;
     @include center-flex;
     .subscribe{
+        position: relative;
         width: 660px;
         padding: 25px 50px;
         h3{
@@ -66,15 +69,24 @@ export default{
     }
     .img-absolut{
         position: absolute;
-        right: 28%;
         height: 100px;
+        right: -220px;
+        bottom: 90px;
+        
     }
     .circle{
         @include circle;
         height: 50px;
         border-color: $gren-color;
         position: absolute;
-        left: 15%;
+        left: -300px;
+        bottom: 150px;
+    }
+    .img-absolut-1{
+        position: absolute;
+        left: 700px;
+        bottom: 100px;
+        z-index: 9;
     }
     
 
