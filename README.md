@@ -8,6 +8,23 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 
 #todo
- - header
-    - add icons
-    - hover
+- header
+   - **hover**
+- hero 
+   - finished
+- About section 
+   - finished
+- Upgrade section 
+   - finished
+-  Lastest courses
+   - **todo slider**
+- testimonial section 
+   - **url img**
+- transorm section 
+   - finished
+- blog section 
+   - **img url**
+- subscribe section 
+   - finished
+- footer
+   -finished

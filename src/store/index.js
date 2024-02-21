@@ -61,21 +61,21 @@ export const store = reactive({
      //section blogds
      dataBlogs:[
          {   
-            imgURL:'',
+            imgURL:'artist-blog-03-480x325.jpeg',
             title:'artista',
             content:'Brush Strokes Energize trees in Paintings',
             data:'may 15, 2020',
             views:'668',
         },
         {   
-            imgURL:'',
+            imgURL:'artist-blog-01-480x325.jpg',
             title:'artista',
             content:'Pocket-Sized Notebooks Hold Miniature Pinting',
             data:'may 15, 2020',
             views:'68',
         },
         {   
-            imgURL:'',
+            imgURL:'artist-blog-02-480x325.jpg',
             title:'artista',
             content:'Connection between Self-Partraits and Identity',
             data:'may 15, 2020',
@@ -104,6 +104,7 @@ export const store = reactive({
             links:[ 'Membership' , 'Purchase guide' , 'Privacy pilicy' , 'Terms of Servis' ,],
         }
 
-    },   
+    },  
+   
     
 });

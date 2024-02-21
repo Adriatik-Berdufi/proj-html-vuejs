@@ -73,7 +73,7 @@ export default{
      //img in absolute
    
   .learn-about-content{
-    height: 800px;
+    height: 600px;
     @include center-flex;
     gap: 200px;
       .img-container{

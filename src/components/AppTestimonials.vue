@@ -17,7 +17,13 @@ export default{
     },
     hidecard(){
         this.show= false;
-    }
+    },
+
+    getImagePath: function(img){
+        return new URL(`../assets/img/${img}`, import.meta.url).href;
+    },
+        
+    
   },
 };
 
