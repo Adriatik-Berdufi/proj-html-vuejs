@@ -2,13 +2,16 @@
 import { store } from "../store";
 
 export default{
+  props: {
+      param: Array,
+    },
   data(){
     return{
       store,
-      prova:'prova',
-     
+      
     }
   },
+  
   methods:{
     getImagePath: function(img){
         return new URL(`../assets/images/${img}`, import.meta.url).href;
@@ -23,17 +26,14 @@ export default{
 
 <template>
    <div class="card-container">
-        <div v-for="card in store.dataBlogs" class="my-card">
+        <div v-for="card in param" class="my-card">
           <div class="mb-3"><img :src="getImagePath(card.imgURL)" alt=""></div>
-          <div class="title">{{card.title.toUpperCase()}}</div>
+          <div class="title">{{card.title}}</div>
           <div class="content">{{card.content}}</div>
           <div>
             <span class="me-5"><span class="me-2"><font-awesome-icon :icon="['far', 'calendar']" /></span>{{ card.data }}</span>
             <span class="me-5"><span class="me-2"><font-awesome-icon :icon="['far', 'eye']" /></span>{{ card.views }}</span>
-
           </div>
-
-            
         </div>
     </div>
 </template>

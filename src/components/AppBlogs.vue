@@ -6,7 +6,7 @@ export default{
   data(){
     return{
       store,
-      prova:'prova',
+      data: store.dataBlogs,
      
     }
   },
@@ -29,7 +29,7 @@ export default{
         </div>
         <div class="card-container">
             
-            <AppCard/>
+            <AppCard :param="data"></AppCard>
             
         </div>
     </section>

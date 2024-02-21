@@ -20,7 +20,12 @@ export default{
         <h2>Latest Online <span>Courses</span></h2>
     </div>
     <!-- todo slider -->
-    <div class="slider text-center">slider</div>
+    <div class="slider">
+        <div class="card">left</div>
+        <div class="card">midle</div>
+        <div class="card">right</div>
+
+    </div>
     <div class="view-all text-center">
         <div>
             <span>
