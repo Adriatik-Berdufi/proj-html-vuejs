@@ -10,6 +10,7 @@ import AppCard from './components/AppCard.vue';
 import AppTransorm from './components/AppTransform.vue';
 import AppTestimonials from './components/AppTestimonials.vue';
 import AppLearnAbout from './components/AppLearnAbout.vue';
+import AppUpgrade from './components/AppUpgrade.vue';
 export default {
   data() {
     
@@ -18,7 +19,7 @@ export default {
      
     }
   },
-  components:{AppTest,AppHeader,AppFooter,AppHero,AppBlogs,AppSubscribe,AppCard,AppTransorm,AppTestimonials,AppLearnAbout},
+  components:{AppTest,AppHeader,AppFooter,AppHero,AppBlogs,AppSubscribe,AppCard,AppTransorm,AppTestimonials,AppLearnAbout,AppUpgrade},
 };
 </script>
 
@@ -26,6 +27,7 @@ export default {
   <AppHeader/>
   <AppHero/>
   <AppLearnAbout/>
+  <AppUpgrade/>
   <AppTestimonials/>
   <AppTransorm/> 
   <AppBlogs/>
