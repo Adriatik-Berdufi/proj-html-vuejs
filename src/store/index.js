@@ -92,9 +92,7 @@ export const store = reactive({
             adress:'382 NE 191st St # 87394 Miami, FL 33179-3889',
             phone:'+1(305) 547-9909 (9am- 5pm EST,Monday - Friday)',
             email:'support@maxcoach.com',
-            social:[
-                'facebook' , 'twitter' , 'instagram' , "linkedin"
-            ],
+            
         },
         explore:{
             title:'Explore',

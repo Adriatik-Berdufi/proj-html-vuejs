@@ -28,8 +28,14 @@ export default{
                         <div class="mb-3">{{ store.footercontent.adress.phone }}</div>
                         <div class="mb-3">{{ store.footercontent.adress.email }}</div>
                     </div>
-                    <!-- Todo icons -->
-                    <div class="socilas">{{ store.footercontent.adress.social }}</div>
+
+                    <div class="socilas">
+                        <span><a href="#"><font-awesome-icon :icon="['fab', 'x-twitter']" /></a></span>
+                        <span><a href="#"><font-awesome-icon :icon="['fab', 'youtube']"/></a></span>
+                        <span><a href="#"><font-awesome-icon :icon="['fab', 'pinterest']"/></a></span>
+                        <span><a href="#"><font-awesome-icon :icon="['fab', 'facebook']"/></a></span>
+                        <span><a href="#"><font-awesome-icon :icon="['fab', 'instagram']"/></a></span>
+                    </div>
                     
                 </div>
                 <div class="info">
@@ -52,16 +58,17 @@ export default{
                         <h5>{{ store.footercontent.info.title }}</h5>
                         <ul v-for="link in store.footercontent.info.links">
                             <li class="mb-3">{{ link }}</li>
+                            
                         </ul>
                         
                     </div> 
                 </div>
                 
             </div>
-            <!-- Todo icon -->
+            
             
             <div class="text-center"> 2020 maxcoach. All Rights Reserved</div>
-            <div class="button">TRN-SU</div>
+            <a href="#" class="button"><font-awesome-icon :icon="['fas', 'arrow-up']" /></a>
             
         </div>
     </footer>
@@ -104,7 +111,27 @@ footer{
         position: absolute;
         bottom: 30px;
         right: 30px;
-        text-align: end;
+
+        
+        background-color: $gren-color;
+        color: white;
+        font-size: 22px;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        @include center-flex;
+        
+    }
+    .socilas{
+        span{
+            font-size: 28px;
+            margin-right: 20px;
+            cursor: pointer;
+            a{
+                list-style: none;
+                color: $green-color;
+            }
+        }
     }
 }
 
