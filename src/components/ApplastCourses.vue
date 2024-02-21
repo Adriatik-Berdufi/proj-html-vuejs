@@ -33,7 +33,9 @@ export default{
             </span>
             <button class="btn-view" type="button">View all Courses -></button>
         </div>
+        <img class="wave" src="../assets/svg/svg-1.svg" alt="">
     </div>
+    
   </section>
 </template>
 
@@ -43,8 +45,8 @@ export default{
 @use '../styles/partials/mixins.scss' as *;
 
 .lastest-courses{
-    height: 900px;
-   // @include center-flex;
+    height: 950px;
+    position: relative;
     gap: 150px;
     padding-bottom: 150px;
     background-color: $white-smoke-1-color;
@@ -69,12 +71,12 @@ export default{
 .slider{
     display: flex;
     justify-content: center;
-    border: 2px solid red;
     height: 550px;
 }
 .view-all{
     height: 200px;
-    @include center-horisontal;
+    @include center-flex;
+    flex-direction: column;
     div{    
         padding:20px ;
         width: 700px
@@ -84,10 +86,15 @@ export default{
         color: $green-color 
     }
     .btn-view{
-            @include my-btn-secondary;
-            font-size: 20px;
-            background-color: $white-smoke-1-color;
-        }
+        @include my-btn-secondary;
+        font-size: 20px;
+        background-color: $white-smoke-1-color;
+    }
+    .wave{
+        width: 100vw;
+        position: absolute;
+        bottom: 0;
+    }
     
 }
 

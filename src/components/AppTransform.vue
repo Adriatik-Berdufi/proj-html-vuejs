@@ -68,6 +68,9 @@ section{
       position: absolute;
       top: -150px;
       left: -90px;
+      path{
+        fill: red !important;
+      }
      }
      .svg1{
       z-index: 2;
