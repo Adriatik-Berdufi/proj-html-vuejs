@@ -99,6 +99,11 @@ footer{
         .adress,.info{
             width: 50%;
             padding: 55px;
+            li{
+                &:hover{
+                    color: $gren-color;
+                }
+            }
         }
 
         //info section
@@ -130,8 +135,12 @@ footer{
             a{
                 list-style: none;
                 color: $green-color;
+                &:hover{
+                    color: $gren-color;
+                }
             }
-        }
+            
+        }   
     }
 }
 

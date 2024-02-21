@@ -23,12 +23,12 @@ export default{
         <button class="btn btn-light">Download free guidebook -></button>
         <div class="icons">
             <ul>
-                <li>icon 1</li>
-                <li>icon 2</li>
-                <li>icon 3</li>
-                <li>icon 4</li>
+                <li><a href="#"><font-awesome-icon :icon="['fas', 'ruler-combined']" /></a></li>
+                <li><a href="#"><font-awesome-icon :icon="['fas', 'house']" /></a></li>
+                <li><a href="#"><font-awesome-icon :icon="['fas', 'book']" /></a></li>
+                <li><a href="#"><font-awesome-icon :icon="['fas', 'cart-shopping']" /></a></li>
             </ul>
-        </div>
+        </div><a href=""></a>
    </div>
 </template>
 
@@ -54,11 +54,16 @@ export default{
             font-size: 38px;
         }
         .btn{
+            border: none;
             margin-top: 30px;
             padding: 15px 30px;
             font-size: 18px;
             font-weight:500;
             color: $gren-color;
+            &:hover{
+                background-color:$gren-color ;
+                color: white;
+            }
         }
         .icons{
             position: absolute;
@@ -68,6 +73,20 @@ export default{
             color: $black-color;
             background-color: $white-color;
         }
+        li{
+            text-align: center;
+            padding: 5px 10px;
+            a{
+            list-style: none;
+            color: black ;
+            font-size: 20px;
+            &:hover{
+                color:$gren-color;
+            }
+            
+        }
+        }
+        
     }
 
 </style>
