@@ -20,7 +20,7 @@ export default{
     },
 
     getImagePath: function(img){
-        return new URL(`../assets/img/${img}`, import.meta.url).href;
+        return new URL(`../assets/images/${img}`, import.meta.url).href;
     },
         
     
@@ -47,7 +47,7 @@ export default{
                 <h2>{{ card.title }}</h2>
                 <p>{{ card.text }}</p>
                 <div class="scheda">
-                    <div class="img">img</div>
+                    <div class="img"><img :src="getImagePath(card.imgUrl)" alt=""></div>
                     <div >
                         <h3>{{ card.nome }}</h3>
                         <h5>{{ card.profession }}</h5>
@@ -59,7 +59,7 @@ export default{
                 <h2>{{ store.testimonials[this.initindex].title }}</h2>
                 <p>{{ store.testimonials[this.initindex].text }}</p>
                 <div class="scheda">
-                    <div class="img">img</div>
+                    <div class="img"><img :src="getImagePath(store.testimonials[this.initindex].imgUrl)" alt=""></div>
                     <div >
                         <h3>{{ store.testimonials[this.initindex].nome }}</h3>
                         <h5>{{ store.testimonials[this.initindex].profession }}</h5>
@@ -133,12 +133,14 @@ section{
                 display: flex;
                 gap: 20px;
                 .img{
-                    border: 1px solid red;
                     height: 50px;
                     width: 50px;
-
                     border-radius: 50%;
                     @include center-flex;
+                    img{
+                        width: 100%;
+                        border-radius: 50%;
+                    }
                 }
                 h3{
                 font-size: 12px;
@@ -162,12 +164,14 @@ section{
             width: 700px;
             height: 250px;
             padding:20px 40px;
-            border: 1px solid rgba(0, 0, 0, 0.999);
+            border: 1px solid rgba(0, 0, 0, 0.25);
             border-radius: 10px;
             position: absolute;
             top: 25%;
             left: -20%;
             background-color: white;
+            -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+            box-shadow: 5px 5px 15px 5px #000000;
             h2{
                 font-size: 20px;
                 margin-bottom: 10px;
@@ -192,20 +196,6 @@ section{
            
         }
     }
-    /* 
-
-    <div class="hover-testimonial">
-                <h2>{{ card[index].title }}</h2>
-                <p>{{ card[index].text }}</p>
-                <div class="scheda">
-                    <div class="img">img</div>
-                <div >
-                    <h3>{{ card[index].nome }}</h3>
-                    <h5>{{ card[index].profession }}</h5>
-                </div>
-            </div>
-    </div>
-
-     */
+ 
 
 </style>
