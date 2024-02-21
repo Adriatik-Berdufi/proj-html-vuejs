@@ -6,9 +6,20 @@ export default{
   data(){
     return{
       store,
-     
+      initindex: 'null',
+      show : false,
     }
   },
+  methods:{
+    showCard(index){
+        this.initindex = index;
+        this.show = true;
+    },
+    hidecard(){
+        this.show= false;
+    },
+  }
+  
 };
 
 
@@ -17,13 +28,25 @@ export default{
 
 <template>
 <header>
-    <div class="d-flex menus">
-        <ul class="me-4 d-flex me-5">
-            <li v-for="link in store.headerLinks" >{{link.title.charAt(0).toUpperCase() + link.title.slice(1)}} <span class="links-icon"><font-awesome-icon :icon="['fas', 'angle-down']" /></span></li>
-        </ul>
-        <div class="logo"><img src="../assets/images/dark-logo.png" alt=""></div>
+  <div class="d-flex menus">
+      <ul class="me-4 d-flex me-5">
+        <li v-for="(link, index) in store.headerLinks" @mouseenter="showCard(index)" @mouseleave="hidecard(index)" :key="index">
+          {{ link.title.charAt(0).toUpperCase() + link.title.slice(1) }}
+          <span class="links-icon"><font-awesome-icon :icon="['fas', 'angle-down']" /></span>
+          <div v-if="show && index === initindex" class="option-container">
+            <ul class="options">
+              <li>optio1</li>
+              <li>optio2</li>
+              <li>optio3</li>
+              <li>optio4</li>
+              <li>optio5</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <div class="logo"><img src="../assets/images/dark-logo.png" alt=""></div>
     </div>
-    
+
     <div class="search d-flex">
       <div class="icons d-flex">
         <a href="#"><font-awesome-icon :icon="['fas', 'cart-shopping']" /></a>
@@ -43,8 +66,9 @@ export default{
 //import of var and mixins
 @use '../styles/partials/variables.scss' as *;
 @use '../styles/partials/mixins.scss' as *;
-
 header{
+    position: sticky;
+    z-index: 9;
     height: $height-header;
     @include center-vertical;
     justify-content: space-between;
@@ -58,6 +82,23 @@ header{
   li{
     padding: 5px 10px;
    
+  }
+  .option-container{
+    position: relative;
+  }
+  .options{
+    position: absolute;
+    left:-25px;
+    z-index: 2;
+
+    width: 120px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 5px 5px 15px 5px #3c3c3c75;
+    text-align: center;
+   &:hover{
+    display: none;
+   }
   }
   .logo{
     img{

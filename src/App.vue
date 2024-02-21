@@ -25,21 +25,30 @@ export default {
 </script>
 
 <template>
-  <AppHeader/>
-  <AppHero/>
-  <AppLearnAbout/>
-  <AppUpgrade/>
-  <AppLastCourses/>
-  <AppTestimonials/>
-  <AppTransorm/> 
-  <AppBlogs/>
-  <AppSubscribe/>
-  <AppFooter/>
+  <div id="app">
+    <AppHeader/>
+    <div class="main-container">
+      <AppHero/>
+      <AppLearnAbout/>
+      <AppUpgrade/>
+      <AppLastCourses/>
+      <AppTestimonials/>
+      <AppTransorm/> 
+      <AppBlogs/>
+      <AppSubscribe/>
+      <AppFooter/>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 //import of var and mixins
 @use './styles/partials/variables.scss' as *;
 @use './styles/partials/mixins.scss' as *;
+.main-container {
+  overflow: scroll;
+  height: calc(100vh - 80px); 
+  position: relative;
+}
 
 </style>

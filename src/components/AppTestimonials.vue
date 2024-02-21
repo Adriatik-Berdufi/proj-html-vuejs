@@ -42,7 +42,6 @@ export default{
     </div>
     <div class="testimonial-content">
         <div class="testimonial-1to3">
-            <!-- todo riempire le card con conntenuto preso dallo store  -->
             <div v-for="card,index in store.testimonials" @mouseenter="showCard(index)" :class="card.class">
                 <h2>{{ card.title }}</h2>
                 <p>{{ card.text }}</p>
