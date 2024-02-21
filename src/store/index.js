@@ -66,6 +66,8 @@ export const store = reactive({
             content:'Brush Strokes Energize trees in Paintings',
             data:'may 15, 2020',
             views:'668',
+            calendarIcon: ['far', 'calendar'],
+            iconviews:['far', 'eye'],
         },
         {   
             imgURL:'artist-blog-01-480x325.jpg',
@@ -73,6 +75,8 @@ export const store = reactive({
             content:'Pocket-Sized Notebooks Hold Miniature Pinting',
             data:'may 15, 2020',
             views:'68',
+            calendarIcon: ['far', 'calendar'],
+            iconviews:['far', 'eye'],
         },
         {   
             imgURL:'artist-blog-02-480x325.jpg',
@@ -80,8 +84,40 @@ export const store = reactive({
             content:'Connection between Self-Partraits and Identity',
             data:'may 15, 2020',
             views:'168',
+            calendarIcon: ['far', 'calendar'],
+            iconviews:['far', 'eye'],
         },
 
+     ],
+
+     courses:[
+        {
+            imgURL:'course-02-480x298.jpg',
+            prezzo:40,
+            content:'Learnind to Write as a Profesional Author',
+            student:50,
+            lessons:15, 
+            calendarIcon: ['far', 'file'],
+            iconviews:['far', 'user'], 
+        },
+        {
+            imgURL:'stock-full-hd-03-480x298.jpg',
+            prezzo:40,
+            content:'Learnind to Write as a Profesional Author',
+            student:50,
+            lessons:15, 
+            calendarIcon: ['far', 'file'],
+            iconviews:['far', 'user'], 
+        },
+        {
+            imgURL:'stock-full-hd-06-480x298.jpg',
+            prezzo:40,
+            content:'Learnind to Write as a Profesional Author',
+            student:50,
+            lessons:15, 
+            calendarIcon: ['far', 'file'],
+            iconviews:['far', 'user'], 
+        },
      ],
 
 

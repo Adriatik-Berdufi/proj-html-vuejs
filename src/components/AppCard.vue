@@ -28,12 +28,19 @@ export default{
    <div class="card-container">
         <div v-for="card in param" class="my-card">
           <div class="mb-3"><img :src="getImagePath(card.imgURL)" alt=""></div>
+          <div v-if="card.prezzo">{{ card.prezzo }}</div>
           <div class="title">{{card.title}}</div>
           <div class="content">{{card.content}}</div>
           <div>
-            <span class="me-5"><span class="me-2"><font-awesome-icon :icon="['far', 'calendar']" /></span>{{ card.data }}</span>
-            <span class="me-5"><span class="me-2"><font-awesome-icon :icon="['far', 'eye']" /></span>{{ card.views }}</span>
+            <span class="me-5" >
+            <span class="me-2">
+              <font-awesome-icon :icon="card.calendarIcon" />
+            </span>{{ card.data }}{{ card.lessons }}</span>
+            <span class="me-5" >
+              <span class="me-2"><font-awesome-icon :icon="card.iconviews" />
+              </span>{{ card.views }}{{ card.student }}</span>
           </div>
+
         </div>
     </div>
 </template>

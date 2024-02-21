@@ -1,12 +1,15 @@
 <script>
 import { store } from "../store";
+import AppCard from "./AppCard.vue";
 
 export default{
   data(){
     return{
       store,
+      data:store.courses,
     }
   },
+  components:{AppCard},
 };
 
 
@@ -21,10 +24,7 @@ export default{
     </div>
     <!-- todo slider -->
     <div class="slider">
-        <div class="card">left</div>
-        <div class="card">midle</div>
-        <div class="card">right</div>
-
+        <AppCard :param="data" class="d-flex gap-5"></AppCard>
     </div>
     <div class="view-all text-center">
         <div>
@@ -67,6 +67,8 @@ export default{
     }
 }
 .slider{
+    display: flex;
+    justify-content: center;
     border: 2px solid red;
     height: 550px;
 }
