@@ -3,10 +3,20 @@ import { store } from "../store";
 
 export default{
   data(){
+    let initindex = 0;
     return{
       store,
-      prova:'prova',
-     
+      initindex: 0,
+      show : false,
+    }
+  },
+  methods:{
+    showCard(index){
+        this.initindex = index;
+        this.show = true;
+    },
+    hidecard(){
+        this.show= false;
     }
   },
 };
@@ -27,11 +37,38 @@ export default{
     <div class="testimonial-content">
         <div class="testimonial-1to3">
             <!-- todo riempire le card con conntenuto preso dallo store  -->
-            <div class="testimonial-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, enim soluta mollitia nisi asperiores voluptas. Vel quis asperiores incidunt iusto expedita sit ducimus beatae, facere rerum ratione quasi veniam saepe.</div>
-            <div class="testimonial-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis consequatur exercitationem provident inventore, placeat vitae ipsam maxime ipsum. Voluptas aut consequatur ratione minus atque aperiam labore aliquid officiis sunt et?</div>
-            <div class="testimonial-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, non consequuntur quo, reprehenderit et ab autem illum, facere minima architecto tenetur recusandae odit eum harum placeat ut! Consectetur, id aliquid.</div>
+            <div v-for="card,index in store.testimonials" @mouseenter="showCard(index)" :class="card.class">
+                <h2>{{ card.title }}</h2>
+                <p>{{ card.text }}</p>
+                <div class="scheda">
+                    <div class="img">img</div>
+                    <div >
+                        <h3>{{ card.nome }}</h3>
+                        <h5>{{ card.profession }}</h5>
+                    </div>
+                </div>
+                
+            </div>
+            <div v-if="(this.show)" @mouseleave="hidecard()" class="hover-testimonial">
+                <h2>{{ store.testimonials[this.initindex].title }}</h2>
+                <p>{{ store.testimonials[this.initindex].text }}</p>
+                <div class="scheda">
+                    <div class="img">img</div>
+                    <div >
+                        <h3>{{ store.testimonials[this.initindex].nome }}</h3>
+                        <h5>{{ store.testimonials[this.initindex].profession }}</h5>
+                    </div>
+                </div>
+            </div>
+
+            
+            
+
+                
+
+           
         </div>
-        <div class="hover-testimonial">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, dolore. Molestias dolores beatae doloribus omnis officiis iste nostrum nulla obcaecati eveniet, error reiciendis veniam commodi non pariatur quas? Nostrum, non.</div>
+        
     </div>
 
    </section>
@@ -53,7 +90,7 @@ section{
         gap: 150px;
         padding-bottom: 150px;
     .content{
-        border: 2px solid red;
+        
         width: 460px;
         padding: 20px;
         color: $green-color;
@@ -71,7 +108,7 @@ section{
     }
     .testimonial-content{
         position: relative;
-        border: 2px solid red;
+       
         height: 550px;
         width: 700px;
         .testimonial-1to3{
@@ -80,6 +117,32 @@ section{
             width: 500px;
             height: 550px;
             position: relative;
+            h2{
+                font-size: 12px;
+            }
+            p{
+                font-size: 10px;
+            }
+            .scheda{
+                display: flex;
+                gap: 20px;
+                .img{
+                    border: 1px solid red;
+                    height: 50px;
+                    width: 50px;
+
+                    border-radius: 50%;
+                    @include center-flex;
+                }
+                h3{
+                font-size: 12px;
+                }
+                h5{
+                    font-size: 12px;
+                }
+
+            }
+            
             .testimonial-1,.testimonial-2,.testimonial-3
             {   
                 padding:20px 40px;
@@ -89,6 +152,7 @@ section{
             
         }
         .hover-testimonial{
+            
             width: 700px;
             height: 250px;
             padding:20px 40px;
@@ -96,8 +160,46 @@ section{
             border-radius: 10px;
             position: absolute;
             top: 25%;
+            left: -20%;
             background-color: white;
+            h2{
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 16px;
+            }
+            .scheda{
+                .img{
+                    height: 80px;
+                    width: 80px;
+                }
+                h3{
+                    font-size: 16px;
+                }
+            }
+            .scheda-testimonial{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+           
         }
     }
+    /* 
+
+    <div class="hover-testimonial">
+                <h2>{{ card[index].title }}</h2>
+                <p>{{ card[index].text }}</p>
+                <div class="scheda">
+                    <div class="img">img</div>
+                <div >
+                    <h3>{{ card[index].nome }}</h3>
+                    <h5>{{ card[index].profession }}</h5>
+                </div>
+            </div>
+    </div>
+
+     */
 
 </style>

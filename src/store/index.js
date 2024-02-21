@@ -29,6 +29,34 @@ export const store = reactive({
             unit:'%',
         }
     }, 
+    //section Testimonials
+    testimonials:[
+        {
+            title:'Professional team of specialist and passionate mentors at reach',
+            text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, enim soluta mollitia nisi asperiores voluptas. Vel quis asperiores incidunt iusto expedita sit ducimus beatae, facere rerum ratione quasi veniam saepe.',
+            imgUrl:'',
+            nome:'Madley pondor',
+            profession:'/ IT Specialist',
+            class:'testimonial-1',
+        },
+        {
+            title:'Professional team of specialist and passionate mentors at reach',
+            text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, enim soluta mollitia nisi asperiores voluptas. Vel quis asperiores incidunt iusto expedita sit ducimus beatae, facere rerum ratione quasi veniam saepe.',
+            imgUrl:'',
+            nome:'mina hollace',
+            profession:'Freelancer',
+            class:'testimonial-2',
+        },
+        {
+            title:'Professional team of specialist and passionate mentors at reach',
+            text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, enim soluta mollitia nisi asperiores voluptas. Vel quis asperiores incidunt iusto expedita sit ducimus beatae, facere rerum ratione quasi veniam saepe.',
+            imgUrl:'',
+            nome:'adriano celentano',
+            profession:'cantante',
+            class:'testimonial-3',
+        },
+        
+    ],
 
      //section blogds
      dataBlogs:[
