@@ -95,7 +95,8 @@ header{
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 5px 5px 15px 5px #3c3c3c75;
-    text-align: center;
+    text-align: center; 
+    box-shadow: 0px 11px 31px -1px rgba(0,0,0,0.83);
    &:hover{
     display: none;
    }
