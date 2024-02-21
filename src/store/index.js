@@ -30,6 +30,32 @@ export const store = reactive({
         }
     }, 
 
+     //section blogds
+     dataBlogs:[
+         {   
+            imgURL:'',
+            title:'artista',
+            content:'Brush Strokes Energize trees in Paintings',
+            data:'may 15, 2020',
+            views:'668',
+        },
+        {   
+            imgURL:'',
+            title:'artista',
+            content:'Pocket-Sized Notebooks Hold Miniature Pinting',
+            data:'may 15, 2020',
+            views:'68',
+        },
+        {   
+            imgURL:'',
+            title:'artista',
+            content:'Connection between Self-Partraits and Identity',
+            data:'may 15, 2020',
+            views:'168',
+        },
+
+     ],
+
 
     //footer
     footercontent:{

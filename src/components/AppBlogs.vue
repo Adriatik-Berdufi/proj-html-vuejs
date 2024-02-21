@@ -1,5 +1,6 @@
 <script>
 import { store } from "../store";
+import AppCard from "./AppCard.vue";
 
 export default{
   data(){
@@ -9,6 +10,7 @@ export default{
      
     }
   },
+  components:{AppCard},
 };
 
 
@@ -23,9 +25,9 @@ export default{
                 <h4>Our Blogs</h4>
         </div>
         <div class="card-container">
-            <div class="my-card">
-                <figure><img class="img-fluid" src="../assets/images/course-02-480x298.jpg" alt=""></figure>
-            </div>
+            
+            <AppCard/>
+            
         </div>
     </section>
 </template>
@@ -49,15 +51,11 @@ export default{
         font-weight: 600;
         color: $gren-color;
     }
-    .my-card{
-        margin-left: auto;
-        margin-right: auto;
-        border: 2px solid red;
-
-        width: 380px;
-        height: 480px;
-        
-
+    .card-container{
+        margin: auto;
+        display: flex;
+        gap: 40px;
     }
+
 }
 </style>
