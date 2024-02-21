@@ -65,13 +65,7 @@ section{
                 span{color: $gren-color;}
             }
             .btn-view{
-                font-size: 14px;
-                font-weight: 600;
-                padding: 0;
-                color: black;
-                background-color: white;
-                border: none;
-                border-bottom:1px solid rgba(0, 0, 0, 0.191)
+              @include my-btn-secondary
             }
         }
     }

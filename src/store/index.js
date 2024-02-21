@@ -1,6 +1,7 @@
 import { reactive }  from 'vue';
 
 export const store = reactive({
+    //header
     headerLinks:[
         {title:'home',},
         {title:'pages'},
@@ -8,7 +9,29 @@ export const store = reactive({
         {title:'features'},
         {title:'blog'},
         {title:'shop'},
-    ],  
+    ], 
+
+    //section learn about
+    statics:{
+        enrolled:{
+            title:'enrolled learners',
+            value:'126',
+            unit:'+',
+        },
+        finished:{
+            title:'finished sessions',
+            value:'80',
+            unit:'',
+        },
+        satisfaction:{
+            title:'satisfaction rate',
+            value:4,
+            unit:'%',
+        }
+    }, 
+
+
+    //footer
     footercontent:{
         adress:{
             title:'Adress',
